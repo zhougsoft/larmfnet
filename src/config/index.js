@@ -19,6 +19,7 @@ export const IMG_CUTOUT_IPFS_CID =
 export const IMG_CUTOUT_WEB_IPFS_CID =
 	'QmPHs6Zd8ZrJ6xkgbNoqKhxZyKAh65KzoQ5Q2JKvot7t6D'
 
+export const LARMFNET_GITHUB_LINK = 'https://github.com/zhoug0x/larmfnet'
 export const ETHERSCAN_LINK =
 	'https://etherscan.io/address/0xafe2c381c385cbbcbb570d8b39b36449be6b35c4'
 export const OPENSEA_LINK = 'https://opensea.io/collection/larvamfers'
