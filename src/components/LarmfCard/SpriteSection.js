@@ -15,7 +15,7 @@ const PlaceholderDisplay = styled.img`
 `
 
 const SpriteWrapper = styled.div`
-	min-height: 150px;
+	height: 175px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -26,6 +26,16 @@ const SpriteWrapper = styled.div`
 	padding: 0.5rem 1rem 0.75rem 1rem;
 	margin-bottom: -1rem;
 `
+
+const getLuckyAnimation = luckyNumber => {
+	if (luckyNumber <= 33) {
+		return 'bounce'
+	} else if (luckyNumber > 66) {
+		return 'dance'
+	} else {
+		return 'wiggle'
+	}
+}
 
 const SpriteSection = ({ larmf, bgColor }) => {
 	const [spriteIsLoading, setSpriteIsLoading] = useState(true)
@@ -48,10 +58,8 @@ const SpriteSection = ({ larmf, bgColor }) => {
 				{spriteIsLoading && <PlaceholderDisplay src={LOADING_IMG_URL} />}
 				<LarmfSprite
 					larmfId={larmf.id}
-
-					// TODO: add switch type
-					// animation={true}
-
+					// generate animation based on random lucky number - bounce, dance or wiggle
+					animation={getLuckyAnimation(larmf.lucky_number)}
 					onLoad={handleSpriteLoad}
 					onError={handleSpriteError}
 				/>
