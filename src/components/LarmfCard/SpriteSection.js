@@ -10,11 +10,12 @@ const ERROR_IMG_URL = '/images/sprite-error.png'
 
 const PlaceholderDisplay = styled.img`
 	width: 150px;
-	height: auto;
+	height: 150px;
+	margin-bottom: -1rem;
 `
 
 const SpriteWrapper = styled.div`
-	min-height: 175px;
+	min-height: 150px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -49,7 +50,7 @@ const SpriteSection = ({ larmf, bgColor }) => {
 					larmfId={larmf.id}
 
 					// TODO: add switch type
-					animation={true}
+					// animation={true}
 
 					onLoad={handleSpriteLoad}
 					onError={handleSpriteError}

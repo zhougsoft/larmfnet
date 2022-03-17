@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import styled, { keyframes, css } from 'styled-components'
+import useSpriteAnimation from '../hooks/useSpriteAnimation'
 import {
 	getLarmfSpriteUrl,
 	getLarmfCutoutMinifiedIPFS,
@@ -57,6 +58,15 @@ const LarmfSprite = ({
 	onError,
 	lazyLoad = true,
 }) => {
+
+
+
+	// WIP - recieve inner and outer animation state from this hook
+	const result = useSpriteAnimation(animation)
+
+
+	
+
 	const [imgUrl, setImgUrl] = useState()
 	const [innerAnimation, setInnerAnimation] = useState()
 	const [outerAnimation, setOuterAnimation] = useState()
