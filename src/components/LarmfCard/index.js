@@ -29,29 +29,31 @@ const LarmfCard = ({ larmf }) => {
 
 	// set trait-specific UI state on-mount
 	useEffect(() => {
-		switch (larmf.type) {
-			case 'Alien':
-				setCardAccentColor(ACCENT_COLOR_ALIEN)
-				setSpriteBgColor(SPRITE_BG_COLOR_ALIEN)
-				break
-			case 'Ape':
-				setCardAccentColor(ACCENT_COLOR_APE)
-				setSpriteBgColor(SPRITE_BG_COLOR_APE)
-				break
-			case 'Zombie':
-				setCardAccentColor(ACCENT_COLOR_ZOMBIE)
-				setSpriteBgColor(SPRITE_BG_COLOR_ZOMBIE)
-				break
-			case 'Gold':
-				setCardAccentColor(ACCENT_COLOR_GOLD)
-				setSpriteBgColor(SPRITE_BG_COLOR_GOLD)
-				break
-			case 'Chrome':
-				setCardAccentColor(ACCENT_COLOR_CHROME)
-				setSpriteBgColor(SPRITE_BG_COLOR_CHROME)
-				break
-			default:
-				return
+		if (!!larmf) {
+			switch (larmf.type) {
+				case 'Alien':
+					setCardAccentColor(ACCENT_COLOR_ALIEN)
+					setSpriteBgColor(SPRITE_BG_COLOR_ALIEN)
+					break
+				case 'Ape':
+					setCardAccentColor(ACCENT_COLOR_APE)
+					setSpriteBgColor(SPRITE_BG_COLOR_APE)
+					break
+				case 'Zombie':
+					setCardAccentColor(ACCENT_COLOR_ZOMBIE)
+					setSpriteBgColor(SPRITE_BG_COLOR_ZOMBIE)
+					break
+				case 'Gold':
+					setCardAccentColor(ACCENT_COLOR_GOLD)
+					setSpriteBgColor(SPRITE_BG_COLOR_GOLD)
+					break
+				case 'Chrome':
+					setCardAccentColor(ACCENT_COLOR_CHROME)
+					setSpriteBgColor(SPRITE_BG_COLOR_CHROME)
+					break
+				default:
+					return
+			}
 		}
 	}, [larmf])
 

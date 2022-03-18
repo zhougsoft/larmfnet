@@ -111,7 +111,7 @@ const DashboardHeader = ({ larmfs }) => {
 			{showWhaleAlert && (
 				<WhaleAlert>
 					<div>
-						<img src={WHALE_TEXT_IMG_URL} />
+						<img src={WHALE_TEXT_IMG_URL} alt="Whale alert!" />
 						<button onClick={() => setShowWhaleAlert(false)}>X</button>
 					</div>
 				</WhaleAlert>

@@ -1,42 +1,10 @@
 import { useState, useEffect } from 'react'
-import styled, { keyframes, css } from 'styled-components'
+import styled from 'styled-components'
 import {
 	getLarmfSpriteUrl,
 	getLarmfCutoutMinifiedIPFS,
 } from '../services/larmf.service'
-
-// ------------------------------------------ ANIMATION STUFF
-const innerSpeed = 1
-const outerSpeed = 1
-
-const keyframesInner = keyframes`
-		from {
-			transform: rotate(359deg);
-		}
-		`
-
-const keyframesOuter = keyframes`
-		0% { 
-			transform: scale(0.2);
-		}
-		
-		50% {
-			transform: scale(1);
-		}
-		
-		100% { 
-			transform: scale(0.2);
-		}
-	`
-
-const inner = css`
-	${keyframesInner} ${innerSpeed}s ease infinite
-`
-
-const outer = css`
-	${keyframesOuter} ${outerSpeed}s ease infinite
-`
-// ------------------------------------------ ^ ANIMATION STUFF
+import useSpriteAnimation from '../hooks/useSpriteAnimation'
 
 const SpriteWrapper = styled.div`
 	width: ${({ width }) => width};
@@ -57,9 +25,8 @@ const LarmfSprite = ({
 	onError,
 	lazyLoad = true,
 }) => {
+	const { innerAnimation, outerAnimation } = useSpriteAnimation(animation)
 	const [imgUrl, setImgUrl] = useState()
-	const [innerAnimation, setInnerAnimation] = useState()
-	const [outerAnimation, setOuterAnimation] = useState()
 
 	// fetch sprite image resource
 	useEffect(() => {
@@ -81,24 +48,6 @@ const LarmfSprite = ({
 			)
 		}
 	}, [larmfId])
-
-	// parse & set animation type
-	useEffect(() => {
-		// switch (animation) {
-		// 	case 'wiggle':
-		// 		setInnerAnimation(inner)
-		// 		setOuterAnimation(outer)
-		// 		break
-		// 	default:
-		// 		setInnerAnimation('')
-		// 		setOuterAnimation('')
-		// }
-
-		if (animation) {
-			setInnerAnimation(inner)
-			setOuterAnimation(outer)
-		}
-	}, [animation])
 
 	if (!imgUrl) return <></>
 
