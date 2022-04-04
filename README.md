@@ -15,5 +15,5 @@ it's messy, good luck and have fun!
 ### RUN LOCALLY:
 - make a copy of `env.example` named `.env` then fill in yr Firebase creds! (or leave empty if u are relying on IPFS to kick in)
 - install dependencies -> `npm install`
-- run development server -> `npm run dev`
+- run development server -> `npm start`
 - open browser, go to `localhost:3000`
