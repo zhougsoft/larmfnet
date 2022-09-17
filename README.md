@@ -1,8 +1,17 @@
-# LARMFNET
+# LARMFNET 🐛⚡
 
-> an unnofficial derivative frontend for the [Larva Mfers NFT](https://etherscan.io/address/0xafe2c381c385cbbcbb570d8b39b36449be6b35c4) project
+> a [zhoug](https://twitter.com/zhoug0x) & [imp0ster](https://twitter.com/the_imp0ster) joint
 
-### official links
+check it out at [LARMF.NET](https://larmf.net)
+
+
+### wtf is this
+this is an unofficial frontend for the [larva mfers](https://etherscan.io/address/0xafe2c381c385cbbcbb570d8b39b36449be6b35c4) NFT project, created to showcase some of the larva mfers features.
+
+_* note: u must have some larva mfers in yr wallet to get the full experience! *_
+
+### notable links
+- [etherscan](https://etherscan.io/address/0xafe2c381c385cbbcbb570d8b39b36449be6b35c4)
 - [twitter](https://twitter.com/LarvaMfers)
 - [opensea](https://opensea.io/collection/larvamfers)
 - [looksrare](https://looksrare.org/collections/0xafe2C381C385cBBCBb570D8b39b36449BE6B35c4)
