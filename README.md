@@ -6,6 +6,7 @@
 - [twitter](https://twitter.com/LarvaMfers)
 - [opensea](https://opensea.io/collection/larvamfers)
 - [looksrare](https://looksrare.org/collections/0xafe2C381C385cBBCBb570D8b39b36449BE6B35c4)
+- [larva mfers art & contract repo](https://github.com/zhoug0x/larva-mfers)
 
 this app is setup to pull images from firebase storage, so running it on yr local is kinda fucky.  
 BUT - the images are setup to pull from IPFS as a fallback if cloud storage fails, so give it a shot!
