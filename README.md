@@ -1,6 +1,6 @@
 # LARMFNET 🐛⚡
 
-> a [zhoug](https://twitter.com/zhoug0x) & [imp0ster](https://twitter.com/the_imp0ster) joint
+> a cc0 [zhoug](https://twitter.com/zhoug0x) & [imp0ster](https://twitter.com/the_imp0ster) joint
 
 check it out at [LARMF.NET](https://larmf.net)
 
